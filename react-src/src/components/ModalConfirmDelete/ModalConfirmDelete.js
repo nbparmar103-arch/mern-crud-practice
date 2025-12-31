@@ -21,7 +21,8 @@ class ModalConfirmDelete extends Component {
 
   handleSubmit(e) {
 
-    let params = e.target.getAttribute('data-userID');
+    const params = this.props.user._id;
+    console.log('Deleting user:', params);
 
     axios({
       method: 'delete',
@@ -35,7 +36,7 @@ class ModalConfirmDelete extends Component {
     })
     .catch((err) => {
       this.handleClose();
-      throw err;
+      console.error('Delete error:', err);
     });
   }
 
@@ -47,15 +48,16 @@ class ModalConfirmDelete extends Component {
         onClose={this.handleClose}
         dimmer='inverted'
         size='tiny'
+        closeIcon='close'
       >
         <Modal.Header>{this.props.headerTitle}</Modal.Header>
         <Modal.Content>
           <p>Are you sure you want to delete <strong>{this.props.user.name}</strong>?</p>
         </Modal.Content>
         <Modal.Actions>
-          <Button onClick={this.handleSubmit} data-userID={this.props.user._id} color='red'>Yes</Button>
+          <Button onClick={this.handleSubmit} color='red'>Yes</Button>
           <Button onClick={this.handleClose} color='black'>No</Button>
-          </Modal.Actions>
+        </Modal.Actions>
       </Modal>
     );
   }

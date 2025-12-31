@@ -44,7 +44,7 @@ class TableUser extends Component {
     users =  [...users].reverse();
 
     return (
-      <Table singleLine>
+      <Table celled striped color='teal'>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>Name</Table.HeaderCell>
@@ -55,7 +55,11 @@ class TableUser extends Component {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {users}
+          {users.length > 0 ? users : (
+             <Table.Row>
+                <Table.Cell colSpan='5' textAlign='center'>No users found. Please add a new user.</Table.Cell>
+             </Table.Row>
+          )}
         </Table.Body>
       </Table>
     );

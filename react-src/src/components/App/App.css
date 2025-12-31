@@ -1,57 +1,31 @@
 .App-header {
-  background-color: #222;
-  color: #ccc;
-  margin-bottom: 25px;
-  padding: 20px 20px 15px;
+  background: linear-gradient(135deg, #2b32b2 0%, #1488cc 100%);
+  color: white;
+  padding: 80px 20px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .App-logo {
   /* animation: App-logo-spin infinite 20s linear; */
-  height: 85px;
+  height: 80px;
+  margin-bottom: 20px;
 }
 
 .App-intro {
   margin-top: 15px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.App-subtitle {
+  font-size: 1.2em;
+  opacity: 0.9;
+  margin-top: 10px;
+  font-weight: 300;
 }
 
 /* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 } */
-
-#online {
-  margin-left: 10px;
-}
-
-.shirts {
-  opacity: 1;
-}
-
-.shirts:hover {
-  opacity: .75;
-}
-
-a.shirts {
-  color: #ccc;
-  font-size: 13px;
-}
-
-.shirts img {
-  height: 40px;
-  animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-	0% {
-		transform: scale(0.85);
-	}
-
-	75% {
-		transform: scale(1);
-	}
-
-	100% {
-		transform: scale(0.85);
-	}
-}

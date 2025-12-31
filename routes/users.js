@@ -155,8 +155,11 @@ router.put('/:id', (req, res) => {
 // DELETE
 router.delete('/:id', (req, res) => {
 
-  User.findByIdAndRemove(req.params.id)
+  User.findByIdAndDelete(req.params.id)
     .then((result) => {
+      if (!result) {
+        return res.status(404).json({ success: false, msg: 'Nothing to delete.' });
+      }
       res.json({
         success: true,
         msg: `It has been deleted.`,

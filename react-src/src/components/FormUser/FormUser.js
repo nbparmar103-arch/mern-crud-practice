@@ -28,7 +28,7 @@ class FormUser extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     // Fill in the form with the appropriate data if user id is provided
     if (this.props.userID) {
       axios.get(`${this.props.server}/api/users/${this.props.userID}`)
@@ -83,6 +83,8 @@ class FormUser extends Component {
     const method = this.props.userID ? 'put' : 'post';
     const params = this.props.userID ? this.props.userID : '';
 
+    console.log('Submitting', method, 'to', `${this.props.server}/api/users/${params}`, user);
+
     axios({
       method: method,
       responseType: 'json',
@@ -90,6 +92,8 @@ class FormUser extends Component {
       data: user
     })
     .then((response) => {
+      console.log('Response:', response.data);
+      
       this.setState({
         formClassName: 'success',
         formSuccessMessage: response.data.msg
@@ -112,6 +116,7 @@ class FormUser extends Component {
       
     })
     .catch((err) => {
+      console.error('Error:', err);
       if (err.response) {
         if (err.response.data) {
           this.setState({

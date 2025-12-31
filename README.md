@@ -26,12 +26,30 @@ Fork, then download or clone the repo.
 git clone https://github.com/<your-user-name>/mern-crud.git
 ```
 
-The *config* folder contains a file named *config.js*. Before running locally, change the value of `db` as seen in the code below. *Make sure MongoDB service is running.*
-```js
-module.exports = {
-  db: "mongodb://localhost/mern-crud",
-  react_app_url: "http://localhost:4200"
-};
+The *config* folder contains a file named *configs.js*. Environment variables are supported; a `.env.example` is provided. Make sure MongoDB service is running.
+
+Quick start (development)
+```powershell
+# from project root (Windows PowerShell)
+npm install
+npm run client-install    # installs front-end deps
+$env:MONGO_URI="mongodb://localhost/mern-crud"
+npm run dev
+```
+
+Quick start (server only)
+```powershell
+# from project root
+npm install
+#$env:MONGO_URI="mongodb://localhost/mern-crud"
+node server.js
+```
+
+Quick start (front-end only)
+```powershell
+cd react-src
+npm install
+npm start
 ```
 
 ## Back-end

@@ -6,7 +6,7 @@ const nameValidator = [
   validate({
     validator: 'isLength',
     arguments: [0, 40],
-    message: 'Name must not exceed {ARGS[1]} characters.'
+    message: 'Name must not exceed 40 characters.'
   })
 ];
 
@@ -14,7 +14,7 @@ const emailValidator = [
   validate({
     validator: 'isLength',
     arguments: [0, 40],
-    message: 'Email must not exceed {ARGS[1]} characters.'
+    message: 'Email must not exceed 40 characters.'
   }),
   validate({
     validator: 'isEmail',
@@ -22,15 +22,15 @@ const emailValidator = [
   })
 ];
 
-const ageValidator = [
-  // TODO: Make some validations here...
-];
-
 const genderValidator = [
-  // TODO: Make some validations here...
+  validate({
+    validator: 'isIn',
+    arguments: [['m', 'f', '']],
+    message: 'Gender must be "m", "f" or empty.'
+  })
 ];
 
-// Define the database model
+// ✅ CLEAN & SAFE SCHEMA
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -45,15 +45,16 @@ const UserSchema = new mongoose.Schema({
   },
   age: {
     type: Number,
-    validate: ageValidator
+    min: [5, 'Age must be at least 5.'],
+    max: [130, 'Age must be at most 130.']
   },
   gender: {
     type: String,
-    validate: genderValidator
+    validate: genderValidator,
+    default: ''
   }
 });
 
-// Use the unique validator plugin
 UserSchema.plugin(unique, { message: 'That {PATH} is already taken.' });
 
-const User = module.exports = mongoose.model('user', UserSchema);
+module.exports = mongoose.model('user', UserSchema);

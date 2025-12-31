@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -11,7 +12,7 @@ const config = require('./config/configs');
 mongoose.Promise = global.Promise;
 
 // Connect to the database
-mongoose.connect(config.db);
+mongoose.connect(process.env.MONGO_URI);
 
 let db = mongoose.connection;
 
@@ -39,9 +40,7 @@ app.use(bodyParser.json());
 
 // Enable cross-origin access through the CORS middleware
 // NOTICE: For React development server only!
-if (process.env.CORS) {
-  app.use(cors());
-}
+app.use(cors());
 
 // Initialize routes middleware
 app.use('/api/users', require('./routes/users'));
