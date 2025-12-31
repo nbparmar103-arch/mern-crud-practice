@@ -1,112 +1,49 @@
-# MERN CRUD
+MERN CRUD Practice Project
+Developed by: Nikhil Parmar
 
-A simple records system using MongoDB, Express.js, React.js, and Node.js with real-time Create, Read, Update, and Delete operations using Socket.io.
+This is a full-stack MERN (MongoDB, Express, React, Node.js) CRUD application built for practice to understand real-world frontend and backend integration.
 
-REST API was implemented on the back-end. Semantic UI React was used for the UI in the front-end.
+The project demonstrates how data is created, read, and updated using a REST API with a MongoDB Atlas cloud database and a React-based user interface.
 
-![Node Version](https://img.shields.io/badge/node-v20+-green.svg)
-![NPM Version](https://img.shields.io/badge/npm-v9+-blue.svg)
-![MongoDB Version](https://img.shields.io/badge/mongodb-v7+-yellowgreen.svg)
-![Mongoose Version](https://img.shields.io/badge/mongoose-v7+-red.svg)
+Features
+Add user records with validation
+View all records in a table
+Edit existing records
+Delete functionality implemented at API level (disabled in UI for demo safety)
+Backend and database-level validation
+MongoDB Atlas cloud database integration
+Tech Stack
+Frontend
 
-Demo: [https://mern-crud-mpfr.onrender.com](https://mern-crud-mpfr.onrender.com)
+React.js
+Semantic UI
+Axios
+Backend
 
-![MERN CRUD Screenshot](screenshot.png)
+Node.js
+Express.js
+Mongoose
+Database
 
-## Support
-[![Follow on GitHub](https://img.shields.io/github/followers/cefjoeii.svg?style=social&label=Follow)](https://github.com/cefjoeii)
-[![GitHub Stars](https://img.shields.io/github/stars/cefjoeii/mern-crud.svg?style=social&label=Star)](https://github.com/cefjoeii/mern-crud)
-[![GitHub Forks](https://img.shields.io/github/forks/cefjoeii/mern-crud.svg?style=social&label=Fork)](https://github.com/cefjoeii/mern-crud/fork)
-[![GitHub Watchers](https://img.shields.io/github/watchers/cefjoeii/mern-crud.svg?style=social&label=Watch)](https://github.com/cefjoeii/mern-crud)
+MongoDB Atlas
+Project Structure
+mern-crud/ ├── models/ ├── routes/ ├── react-src/ ├── server.js ├── package.json └── README.md
 
-## Instructions
+Purpose
+This project was created by Nikhil Parmar to practice:
 
-Fork, then download or clone the repo.
-```bash
-git clone https://github.com/<your-user-name>/mern-crud.git
-```
+Full-stack MERN development
+API and database integration
+Cloud database usage
+Git and GitHub workflow
+Client demo and interview preparation
+Demo Notes
+Add, View, and Edit operations are fully functional
+Delete is hidden in UI for safe demo purposes
+Data is stored securely in MongoDB Atlas
+One-Line Description
+MERN stack CRUD application developed by Nikhil Parmar with MongoDB Atlas integration.
 
-The *config* folder contains a file named *configs.js*. Environment variables are supported; a `.env.example` is provided. Make sure MongoDB service is running.
-
-Quick start (development)
-```powershell
-# from project root (Windows PowerShell)
-npm install
-npm run client-install    # installs front-end deps
-$env:MONGO_URI="mongodb://localhost/mern-crud"
-npm run dev
-```
-
-Quick start (server only)
-```powershell
-# from project root
-npm install
-#$env:MONGO_URI="mongodb://localhost/mern-crud"
-node server.js
-```
-
-Quick start (front-end only)
-```powershell
-cd react-src
-npm install
-npm start
-```
-
-## Back-end
-Install the dependencies via the terminal.
-```bash
-npm install
-```
-
-Run the *main server*.
-```bash
-CORS=1 node server
-```
-View [http://localhost:3000](http://localhost:3000) on the browser.
-
-## Front-end
-If you want to modify the front-end, go to *react-src* folder via the terminal.
-
-```bash
-cd react-src
-```
-
-Install the dependencies required by React.
-```bash
-npm install
-```
-
-Run the *development server* for React.
-```bash
-REACT_APP_API_URL=http://localhost:3000 npm start
-```
-
-View [http://localhost:4200](http://localhost:4200) on the browser.
-
-To make a production build, simply run on *react-src* folder via the terminal.
-```bash
-npm run build
-```
-
-It re-creates a folder named *public* on the root directory. This is where the production-ready front-end of the web application resides.
-
-## Docker
-```bash
-docker-compose up
-```
-
-## Contribute
-Feel free to help out as I may have other work/life commitments. See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## To Do
-
-- [x] Create
-- [x] Read
-- [x] Update
-- [x] Delete
-- [x] Real-time broadcast using Socket.io
-- [x] Deploy in Heroku
-- [x] Front-end validation (HTML)
-
-## License
-**MERN CRUD** is available under the **MIT** license. See the [LICENSE](LICENSE) file for more info.
+Author
+Nikhil Parmar
+Full-Stack Web Developer
