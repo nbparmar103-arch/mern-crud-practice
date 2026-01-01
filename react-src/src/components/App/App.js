@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Segment, Header, Icon, Grid, Divider, List, Label, Message } from 'semantic-ui-react';
+import { Container, Segment, Header, Icon, Grid, Divider, List, Label, Message, Card, Image } from 'semantic-ui-react';
 import axios from 'axios';
 import io from 'socket.io-client';
 
@@ -110,50 +110,68 @@ class App extends Component {
                  </Header>
               </Divider>
 
-              <List relaxed size='large'>
-                <List.Item>
-                  <List.Icon name='check circle' color='green' verticalAlign='middle' />
-                  <List.Content>
-                    <List.Header>Add User Records</List.Header>
-                    <List.Description>Users can add new records with name, email, age, and gender using a validated form.</List.Description>
-                  </List.Content>
-                </List.Item>
-                <List.Item>
-                  <List.Icon name='check circle' color='green' verticalAlign='middle' />
-                  <List.Content>
-                    <List.Header>View Records (Read)</List.Header>
-                    <List.Description>All records are displayed in a structured table with real-time updates.</List.Description>
-                  </List.Content>
-                </List.Item>
-                <List.Item>
-                  <List.Icon name='check circle' color='green' verticalAlign='middle' />
-                  <List.Content>
-                    <List.Header>Edit Records (Update)</List.Header>
-                    <List.Description>Existing user data can be updated instantly via modal-based forms.</List.Description>
-                  </List.Content>
-                </List.Item>
-                <List.Item>
-                  <List.Icon name='lock' color='red' verticalAlign='middle' />
-                  <List.Content>
-                    <List.Header>Delete (Role-based / Disabled for Demo)</List.Header>
-                    <List.Description>Delete functionality is implemented at API level and intentionally hidden for demo safety.</List.Description>
-                  </List.Content>
-                </List.Item>
-                <List.Item>
-                  <List.Icon name='check circle' color='green' verticalAlign='middle' />
-                  <List.Content>
-                    <List.Header>Backend Validation</List.Header>
-                    <List.Description>Strong validation at database and API level to ensure clean and accurate data.</List.Description>
-                  </List.Content>
-                </List.Item>
-                <List.Item>
-                  <List.Icon name='cloud' color='blue' verticalAlign='middle' />
-                  <List.Content>
-                    <List.Header>Cloud Database Integration</List.Header>
-                    <List.Description>Uses MongoDB Atlas for secure and scalable data storage.</List.Description>
-                  </List.Content>
-                </List.Item>
-              </List>
+              <Card.Group itemsPerRow={3} stackable>
+                <Card>
+                  <Card.Content>
+                    <Icon name='add user' size='large' color='green' style={{ float: 'right' }} />
+                    <Card.Header>Add User Records</Card.Header>
+                    <Card.Meta>Create</Card.Meta>
+                    <Card.Description>
+                      Users can add new records with name, email, age, and gender using a validated form.
+                    </Card.Description>
+                  </Card.Content>
+                </Card>
+                <Card>
+                  <Card.Content>
+                    <Icon name='table' size='large' color='blue' style={{ float: 'right' }} />
+                    <Card.Header>View Records</Card.Header>
+                    <Card.Meta>Read</Card.Meta>
+                    <Card.Description>
+                      All records are displayed in a structured table with real-time updates.
+                    </Card.Description>
+                  </Card.Content>
+                </Card>
+                <Card>
+                  <Card.Content>
+                    <Icon name='edit' size='large' color='yellow' style={{ float: 'right' }} />
+                    <Card.Header>Edit Records</Card.Header>
+                    <Card.Meta>Update</Card.Meta>
+                    <Card.Description>
+                      Existing user data can be updated instantly via modal-based forms.
+                    </Card.Description>
+                  </Card.Content>
+                </Card>
+                <Card>
+                  <Card.Content>
+                    <Icon name='lock' size='large' color='red' style={{ float: 'right' }} />
+                    <Card.Header>Delete</Card.Header>
+                    <Card.Meta>Role-based / Demo</Card.Meta>
+                    <Card.Description>
+                      Delete functionality is implemented at API level and intentionally hidden for demo safety.
+                    </Card.Description>
+                  </Card.Content>
+                </Card>
+                <Card>
+                  <Card.Content>
+                    <Icon name='shield' size='large' color='violet' style={{ float: 'right' }} />
+                    <Card.Header>Backend Validation</Card.Header>
+                    <Card.Meta>Security</Card.Meta>
+                    <Card.Description>
+                      Strong validation at database and API level to ensure clean and accurate data.
+                    </Card.Description>
+                  </Card.Content>
+                </Card>
+                <Card>
+                  <Card.Content>
+                    <Icon name='cloud' size='large' color='teal' style={{ float: 'right' }} />
+                    <Card.Header>Cloud DB</Card.Header>
+                    <Card.Meta>MongoDB Atlas</Card.Meta>
+                    <Card.Description>
+                      Uses MongoDB Atlas for secure and scalable data storage.
+                    </Card.Description>
+                  </Card.Content>
+                </Card>
+              </Card.Group>
 
               <Divider horizontal section>
                  <Header as='h4'>
@@ -163,11 +181,22 @@ class App extends Component {
               </Divider>
 
               <Label.Group size='large' color='blue'>
-                <Label>Frontend: React.js, Semantic UI</Label>
-                <Label>Backend: Node.js, Express.js</Label>
-                <Label>Database: MongoDB Atlas</Label>
-                <Label>Architecture: RESTful API</Label>
-                <Label>Tools: Axios, Mongoose, Socket-ready structure</Label>
+                <Label color='teal' image size='large'>
+                  <Icon name='react' /> React.js
+                  <Label.Detail>Frontend</Label.Detail>
+                </Label>
+                <Label color='green' image size='large'>
+                  <Icon name='node' /> Node.js
+                  <Label.Detail>Backend</Label.Detail>
+                </Label>
+                <Label color='olive' image size='large'>
+                  <Icon name='server' /> Express.js
+                  <Label.Detail>API</Label.Detail>
+                </Label>
+                <Label color='green' image size='large'>
+                  <Icon name='database' /> MongoDB Atlas
+                  <Label.Detail>Database</Label.Detail>
+                </Label>
               </Label.Group>
 
               <Divider horizontal section>
@@ -177,17 +206,22 @@ class App extends Component {
                  </Header>
               </Divider>
 
-              <p style={{ fontSize: '1.2em' }}>This project was built by <strong>Nikhil Parmar</strong> to:</p>
-              <List bulleted size='large'>
-                <List.Item>Practice real-world full-stack development</List.Item>
-                <List.Item>Understand data validation and API integration</List.Item>
-                <List.Item>Work with cloud databases</List.Item>
-                <List.Item>Prepare for client demos, interviews, and production-level thinking</List.Item>
-              </List>
-
               <Message info size='large'>
-                <Message.Header>One-Line Demo Explanation (Client / Interview)</Message.Header>
-                <p>“This is a MERN stack user management system built by <strong>Nikhil Parmar</strong>, featuring validated CRUD operations with a cloud-based MongoDB backend.”</p>
+                <Message.Header>Purpose of This Project</Message.Header>
+                <List bulleted>
+                  <List.Item>Practice real-world full-stack development</List.Item>
+                  <List.Item>Understand data validation and API integration</List.Item>
+                  <List.Item>Work with cloud databases</List.Item>
+                  <List.Item>Prepare for client demos, interviews, and production-level thinking</List.Item>
+                </List>
+              </Message>
+
+              <Message positive size='big' icon>
+                <Icon name='quote left' />
+                <Message.Content>
+                  <Message.Header>One-Line Demo Explanation</Message.Header>
+                  <p>“This is a MERN stack user management system built by Nikhil Parmar, featuring validated CRUD operations with a cloud-based MongoDB backend.”</p>
+                </Message.Content>
               </Message>
 
             </Container>
