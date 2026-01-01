@@ -1,7 +1,7 @@
 # 📄 MERN CRUD Project - Development Report
 
 **Prepared by:** Nikhil Parmar  
-**Date:** January 2025  
+**Date:** January 2026  
 **Project:** MERN Stack User Management System
 
 ---
@@ -131,4 +131,4 @@ Debugging support
 
 All final implementations, validations, optimizations, and testing were done manually to ensure code correctness, performance, and maintainability.
 
-**© 2025 Nikhil Parmar**
+**© 2026 Nikhil Parmar**
