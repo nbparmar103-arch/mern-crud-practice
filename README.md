@@ -113,4 +113,4 @@ This project was developed by **Nikhil Parmar** to demonstrate proficiency in:
 
 ---
 
-&copy; 2025 Nikhil Parmar. All Rights Reserved.
+&copy; 2026 Nikhil Parmar. All Rights Reserved.
