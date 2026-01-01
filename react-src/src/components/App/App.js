@@ -270,6 +270,11 @@ class App extends Component {
                      | Developed by <span style={{ color: '#00b5ad', fontWeight: 'bold' }}>Nikhil Parmar</span>
                   </span>
                 </p>
+                <p>
+                  <a href='https://github.com/nbparmar103-arch/mern-crud-practice' target='_blank' rel='noopener noreferrer' style={{ color: 'white' }}>
+                    <Icon name='github' size='large' /> View on GitHub
+                  </a>
+                </p>
             </Container>
         </Segment>
       </div>
