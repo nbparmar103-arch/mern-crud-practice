@@ -89,6 +89,11 @@ class App extends Component {
             <p className='App-subtitle'>
               Developed by Nikhil Parmar
             </p>
+            <Label.Group size='medium' style={{ marginTop: '10px' }}>
+                <Label basic color='blue' content='GitHub Copilot' icon='github' />
+                <Label basic color='teal' content='ChatGPT' icon='talk' />
+                <Label basic color='violet' content='Trae IDE' icon='code' />
+            </Label.Group>
           </div>
         </div>
         <Container>
@@ -198,6 +203,46 @@ class App extends Component {
                   <Label.Detail>Database</Label.Detail>
                 </Label>
               </Label.Group>
+
+              <Divider horizontal section>
+                 <Header as='h4'>
+                    <Icon name='microchip' />
+                    AI Power & Tools
+                 </Header>
+              </Divider>
+
+              <Card.Group itemsPerRow={3} stackable>
+                 <Card>
+                    <Card.Content>
+                       <Icon name='github' size='large' color='black' style={{ float: 'right' }} />
+                       <Card.Header>GitHub Copilot</Card.Header>
+                       <Card.Meta>AI Pair Programmer</Card.Meta>
+                       <Card.Description>
+                          Used for intelligent code completion and suggestions.
+                       </Card.Description>
+                    </Card.Content>
+                 </Card>
+                 <Card>
+                    <Card.Content>
+                       <Icon name='talk' size='large' color='teal' style={{ float: 'right' }} />
+                       <Card.Header>ChatGPT</Card.Header>
+                       <Card.Meta>AI Assistant</Card.Meta>
+                       <Card.Description>
+                          Assisted in problem-solving, documentation, and logic refinement.
+                       </Card.Description>
+                    </Card.Content>
+                 </Card>
+                 <Card>
+                    <Card.Content>
+                       <Icon name='code' size='large' color='violet' style={{ float: 'right' }} />
+                       <Card.Header>Trae IDE</Card.Header>
+                       <Card.Meta>Modern Editor</Card.Meta>
+                       <Card.Description>
+                          The powerful AI-native IDE used to build and manage this project.
+                       </Card.Description>
+                    </Card.Content>
+                 </Card>
+              </Card.Group>
 
               <Divider horizontal section>
                  <Header as='h4'>
