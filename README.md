@@ -109,7 +109,7 @@ This project was developed by **Nikhil Parmar** to demonstrate proficiency in:
 
 **Nikhil Parmar**  
 *Full-Stack Web Developer*  
-[GitHub Profile](https://github.com/nbparmar103-arch) | [LinkedIn](https://www.linkedin.com/in/nikhil-parmar/)
+[GitHub Profile](https://github.com/nbparmar103-arch) | [LinkedIn](www.linkedin.com/in/nikhil-frontend-dev)
 
 ---
 
