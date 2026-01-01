@@ -264,7 +264,12 @@ class App extends Component {
         
         <Segment inverted vertical style={{ margin: '5em 0em 0em', padding: '2em 0em' }}>
             <Container textAlign='center'>
-                <p>MERN CRUD Application &copy; 2025</p>
+                <p>
+                  MERN CRUD Application &copy; 2025
+                  <span style={{ marginLeft: '10px' }}>
+                     | Developed by <span style={{ color: '#00b5ad', fontWeight: 'bold' }}>Nikhil Parmar</span>
+                  </span>
+                </p>
             </Container>
         </Segment>
       </div>
