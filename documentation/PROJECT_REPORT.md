@@ -82,4 +82,53 @@ This project successfully demonstrates the ability to build, deploy, and documen
 
 ---
 
+
+## 7. AI-Assisted Development Tools Used
+
+To improve development efficiency, code quality, and problem-solving speed, the project leveraged modern AI-assisted developer tools alongside manual engineering and best practices.
+
+7.1. ChatGPT
+
+Used for architecture planning, API flow design, and feature breakdown.
+
+Assisted in debugging errors, resolving CORS issues, and identifying deprecated methods (e.g., Mongoose updates).
+
+Helped generate optimized logic suggestions, refactoring ideas, and documentation structure.
+
+Supported faster understanding of Socket.io integration patterns and edge cases.
+
+7.2. GitHub Copilot
+
+Used as an intelligent code completion assistant during development.
+
+Accelerated writing of:
+
+CRUD controller functions
+
+Mongoose schemas
+
+React components and hooks
+
+Improved development speed while maintaining code consistency and readability.
+
+7.3. Trea IDE (AI-Enhanced IDE)
+
+Utilized for real-time code suggestions, syntax improvements, and quick fixes.
+
+Assisted in identifying potential logical issues during development.
+
+Helped streamline repetitive coding tasks and improve overall productivity.
+
+AI Usage Approach
+
+AI tools were used primarily for:
+
+Ideation and acceleration
+
+Code suggestions and optimization hints
+
+Debugging support
+
+All final implementations, validations, optimizations, and testing were done manually to ensure code correctness, performance, and maintainability.
+
 **© 2025 Nikhil Parmar**
